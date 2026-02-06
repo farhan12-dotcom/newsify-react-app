@@ -22,7 +22,7 @@ const News = (props) => {
     setLoading(true);
 
     try {
-      const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=5c834cdc4afd46c38a083df60625172a&page=${pageNumber}&pageSize=${props.pageSize}`;
+      const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=1abfffa95aa541c3a0d538984381bf66a&page=${pageNumber}&pageSize=${props.pageSize}`;
       const response = await fetch(url);
       props.setProgress(30);
       const parsedData = await response.json();
@@ -47,7 +47,7 @@ const News = (props) => {
     setPage(nextPage);
 
     try {
-      const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=5c834cdc4afd46c38a083df60625172a&page=${nextPage}&pageSize=${props.pageSize}`;
+      const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=1abfffa95aa541c3a0d538984381bf66a&page=${nextPage}&pageSize=${props.pageSize}`;
       const response = await fetch(url);
       const parsedData = await response.json();
 
@@ -116,3 +116,4 @@ News.propTypes = {
 };
 
 export default News;
+
